@@ -14,7 +14,9 @@ using TA.Service.Interface;
 
 namespace Tweet.API.Controllers
 {
+    [ApiController]
     [Route("api/v1.0/tweets/")]
+    //[Route("[controller]")]
     [Authorize]
     public class UserController : Controller
     {
@@ -285,6 +287,7 @@ namespace Tweet.API.Controllers
 
 
         // Getting All Users 
+        [HttpGet]
         [Route("users/all")]
         public JsonResult GetAllUsers()
         {

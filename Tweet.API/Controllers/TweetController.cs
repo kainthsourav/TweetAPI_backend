@@ -9,7 +9,9 @@ using TA.Service.Interface;
 
 namespace Tweet.API.Controllers
 {
+    [ApiController]
     [Route("api/v1.0/tweets/")]
+    //[Route("[controller]")]
     [Authorize]
     public class TweetController : Controller
     {
@@ -164,6 +166,7 @@ namespace Tweet.API.Controllers
 
 
         // Getting All Tweets
+        [HttpGet]
         [Route("all")]
         public JsonResult GetAllTweets()
         {
@@ -238,6 +241,7 @@ namespace Tweet.API.Controllers
         }
 
         [Route("latestTweet")]
+        [HttpGet]
         public JsonResult GetLatestTweets()
         {
             List<TweetModel> allTweets = new List<TweetModel>();

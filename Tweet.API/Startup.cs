@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Prometheus;
 using System;
 using System.Collections.Generic;
@@ -37,7 +38,10 @@ namespace Tweet.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Tweet.API", Version = "v1" });
+            });
             services.Configure<DatabaseSettings>(Configuration.GetSection(nameof(DatabaseSettings)));
 
             services.AddSingleton<IDatabaseSettings>(x => x.GetRequiredService<IOptions<DatabaseSettings>>().Value);
@@ -66,11 +70,7 @@ namespace Tweet.API
                };
            });
 
-            //services.AddApiVersioning(config => {
-            //    config.DefaultApiVersion = new ApiVersion(1, 0);
-            //});
-
-            //services.AddSwaggerGen();
+            
 
             services.AddControllers();
 
@@ -81,6 +81,7 @@ namespace Tweet.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            
             var counter = Metrics.CreateCounter("TweetAppApi_path_counter", "Counts requests to the TweetAppApi endpoints", new CounterConfiguration
             {
                 LabelNames = new[] { "method", "endpoint" }
@@ -89,6 +90,8 @@ namespace Tweet.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tweet.API v1"));
             }
 
 
