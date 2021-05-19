@@ -46,7 +46,7 @@ namespace Tweet.API.Controllers
                     {
                         return new JsonResult("User registered successfully");
                     }
-                    return new JsonResult("User already exists");
+                    return new JsonResult("User exists");
                 }
                 else
                 {
