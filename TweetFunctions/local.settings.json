@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "ConnectionString": "mongodb+srv://admin:admin123@mydatabase.gfgrb.mongodb.net/TweetAppDB?retryWrites=true&w=majority",
+    "DatabaseName": "TweetAppDB"
+  }
+}
