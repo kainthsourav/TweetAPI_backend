@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tweet.API", "Tweet.API\Tweet.API.csproj", "{20B3E60E-CA1B-416F-BD40-3CE6B237E709}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TA.Domain", "TA.Domain\TA.Domain.csproj", "{0BFA4083-2B30-429A-8C29-E8D85D5288D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.Domain", "TA.Domain\TA.Domain.csproj", "{0BFA4083-2B30-429A-8C29-E8D85D5288D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TA.Repo", "TA.Repo\TA.Repo.csproj", "{EEFC797B-66A9-4201-935A-621F57F5F227}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.Repo", "TA.Repo\TA.Repo.csproj", "{EEFC797B-66A9-4201-935A-621F57F5F227}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TA.Service", "TA.Service\TA.Service.csproj", "{523A13A5-38A5-4377-B3E6-7385BDBCEB16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.Service", "TA.Service\TA.Service.csproj", "{523A13A5-38A5-4377-B3E6-7385BDBCEB16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetFunctions", "TweetFunctions\TweetFunctions.csproj", "{C0118383-49B5-4795-BC00-110E6C184073}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{20B3E60E-CA1B-416F-BD40-3CE6B237E709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20B3E60E-CA1B-416F-BD40-3CE6B237E709}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20B3E60E-CA1B-416F-BD40-3CE6B237E709}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20B3E60E-CA1B-416F-BD40-3CE6B237E709}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0BFA4083-2B30-429A-8C29-E8D85D5288D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0BFA4083-2B30-429A-8C29-E8D85D5288D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BFA4083-2B30-429A-8C29-E8D85D5288D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{523A13A5-38A5-4377-B3E6-7385BDBCEB16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{523A13A5-38A5-4377-B3E6-7385BDBCEB16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{523A13A5-38A5-4377-B3E6-7385BDBCEB16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0118383-49B5-4795-BC00-110E6C184073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0118383-49B5-4795-BC00-110E6C184073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0118383-49B5-4795-BC00-110E6C184073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0118383-49B5-4795-BC00-110E6C184073}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

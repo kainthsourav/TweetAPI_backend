@@ -14,8 +14,10 @@ namespace TA.Repo.Implementation
 
         public TweetRepository(IDatabaseSettings databaseSettings)
         {
-            var client = new MongoClient(databaseSettings.ConnectionString);
-            var database = client.GetDatabase(databaseSettings.DatabaseName);
+            var client = new MongoClient(System.Environment.GetEnvironmentVariable("ConnectionString"));
+            //var client = new MongoClient(databaseSettings.ConnectionString);
+            //var database = client.GetDatabase(databaseSettings.DatabaseName);
+            var database = client.GetDatabase(System.Environment.GetEnvironmentVariable("DatabaseName"));
             _tweetData = database.GetCollection<TweetModel>("TweetData");
         }
 
