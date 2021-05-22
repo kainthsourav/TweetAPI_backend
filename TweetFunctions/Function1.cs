@@ -150,7 +150,7 @@ namespace TweetFunctions
             var response = userService.Register(user);
             if (response == false)
             {
-                return new OkObjectResult("User already existsc,please login");
+                return new OkObjectResult("User already exists");
             }
             else if (response == true)
             {
