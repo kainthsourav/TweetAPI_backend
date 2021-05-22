@@ -130,7 +130,7 @@ namespace TweetFunctions
             var response = userService.Login(user);
             if (response != null)
             {
-                return new OkObjectResult("Login Sucessfull");
+                return new OkObjectResult(response);
             }
             else
             {
